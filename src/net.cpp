@@ -1197,14 +1197,10 @@ void MapPort(bool)
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
 static const char *strMainNetDNSSeed[][2] = {
-    {"darkcoin.io", "dnsseed.darkcoin.io"},
-    {"darkcoin.qa", "dnsseed.darkcoin.qa"},
     {NULL, NULL}
 };
 
 static const char *strTestNetDNSSeed[][2] = {
-    {"darkcoin.io", "testnet-seed.darkcoin.io"},
-    {"darkcoin.qa", "testnet-seed.darkcoin.qa"},
     {NULL, NULL}
 };
 
@@ -1253,10 +1249,8 @@ void ThreadDNSAddressSeed()
 
 // python to generate the seed hex
 // '{:02X}{:02X}{:02X}{:02X}'.format(*map(int, "23.23.186.131".split('.')))
-
 unsigned int pnSeed[] =
 {
-    0x3210ce66, 0x3213747b, 0x1717ba83, 0x3210ce66, 0x3213747b, 0x1715cc22, 0xbc8e2769, 0x36f8e397, 0x2a793a5b, 0x3251c027, 0x05fe6003, 0xaf73c92c, 0xd035bf02, 0xc06f4182, 0xa2f32110
 };
 
 void DumpAddresses()

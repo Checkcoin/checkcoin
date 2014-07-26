@@ -1323,7 +1323,7 @@ uint256 static GetOrphanRoot(const CBlockHeader* pblock)
 
 int64 static GetBlockValue(int nBits, int nHeight, int64 nFees)
 {
-    if(nHeight == 1)    return 14000000;  // First block is 14.000.000 (14 million)
+    if(nHeight == 1)    return 14000000 * COIN;  // First block is 14.000.000 (14 million)
     if(nHeight <= 8000) return 0 + nFees; // Prevent ninja mining
 
     int nSubsidy = 10 * COIN;

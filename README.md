@@ -1,15 +1,15 @@
-DarkCoin integration/staging tree
+CheckCoin integration/staging tree
 ================================
 
-http://www.darkcoin.io
+http://www.checkcoin.cc
 
 Copyright (c) 2009-2013 Bitcoin Developers
-Copyright (c) 2013-2014 DarkCoin Developers
+Copyright (c) 2013-2014 CheckCoin Developers
 
-What is DarkCoin?
+What is CheckCoin?
 ----------------
 
-DarkCoin is a lite version of Bitcoin using X11 as a proof-of-work algorithm.
+CheckCoin is a lite version of Bitcoin using X11 as a proof-of-work algorithm.
  - Super secure hashing algorithm: 11 rounds of scientific hashing functions (blake, bmw, groestl, jh, keccak, skein, luffa, cubehash, shavite, simd, echo)
  - Block reward is controlled by moore's law: 2222222/(((Difficulty+2600)/9)^2)
  - GPU/CPU only mining

@@ -1,7 +1,7 @@
 TEMPLATE = app
-TARGET = darkcoin-qt
-macx:TARGET = "DarkCoin-Qt"
-VERSION = 0.9.0.0
+TARGET = checkcoin-qt
+macx:TARGET = "CheckCoin-Qt"
+VERSION = 0.1.0.0
 INCLUDEPATH += src src/json src/qt
 QT += core gui network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -348,7 +348,7 @@ DEPENDPATH += src/qt/test
 QT += testlib
 DEFINES += USE_QRCODE
 LIBS += -lqrencode
-TARGET = darkcoin-qt_test
+TARGET = checkcoin-qt_test
 DEFINES += BITCOIN_QT_TEST
   macx: CONFIG -= app_bundle
 }

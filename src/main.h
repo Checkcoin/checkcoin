@@ -76,7 +76,7 @@ static const int64 DUST_SOFT_LIMIT = 100000; // 0.001 DRK
 /** Dust Hard Limit, ignored as wallet inputs (mininput default) */
 static const int64 DUST_HARD_LIMIT = 1000;   // 0.00001 DRK mininput
 /** No amount larger than this (in satoshi) is valid */
-static const int64 MAX_MONEY = 22000000 * COIN;
+static const int64 MAX_MONEY = 100000000 * COIN;
 inline bool MoneyRange(int64 nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 /** Coinbase transaction outputs can only be spent after this number of new blocks (network rule) */
 static const int COINBASE_MATURITY = 100;
@@ -720,7 +720,7 @@ void UpdateCoins(const CTransaction& tx, CValidationState &state, CCoinsViewCach
 
     // Check everything without accepting into the pool
     bool IsAcceptable(CValidationState &state, bool fCheckInputs=true, bool fLimitFree = true, bool* pfMissingInputs=NULL);
-    
+
     // Check only the inputs in a transaction
     bool AcceptableInputs(CValidationState &state, bool fLimitFree);
 
@@ -1309,7 +1309,7 @@ public:
 
 
 class CMasterNodeVote
-{   
+{
 public:
     int votes;
     CScript pubkey;
@@ -1346,17 +1346,17 @@ public:
     }
 
     void Vote()
-    { 
-        votes += 1; 
+    {
+        votes += 1;
     }
 
     int GetVotes()
-    { 
+    {
         return votes;
     }
 
     int GetHeight()
-    { 
+    {
         return blockHeight;
     }
 
@@ -1651,7 +1651,7 @@ public:
     // if dbp is provided, the file is known to already reside on disk
     bool AcceptBlock(CValidationState &state, CDiskBlockPos *dbp = NULL);
 
-    
+
     bool MasterNodePaymentsOn() const
     {
         if(fTestNet){
@@ -1661,7 +1661,7 @@ public:
         }
         return false;
     }
-    
+
     bool MasterNodePaymentsEnforcing() const
     {
         if(nTime > enforceMasternodePaymentsTime) return true;
@@ -2443,7 +2443,7 @@ public:
         now = newNow;
         enabled = 1;
         lastTimeSeen = 0;
-    
+
     }
 
     uint256 CalculateScore(int mod=10);
@@ -2500,19 +2500,19 @@ public:
     CPubKey pubkeyMasterNode;
     std::vector<unsigned char> vchMasterNodeSignature;
     CScript collateralPubKey;
-    
+
     int64 masterNodeSignatureTime;
 
     CDarkSendPool()
     {
 
-        std::string strAddress = "";  
+        std::string strAddress = "";
         if(!fTestNet) {
             strAddress = "Xq19GqFvajRrEdDHYRKGYjTsQfpV5jyipF";
         } else {
             strAddress = "mxE2Rp3oYpSEFdsN5TdHWhZvEHm3PJQQVm";
         }
-        
+
         SetCollateralAddress(strAddress);
     }
 

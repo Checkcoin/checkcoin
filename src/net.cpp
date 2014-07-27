@@ -1251,6 +1251,7 @@ void ThreadDNSAddressSeed()
 // '{:02X}{:02X}{:02X}{:02X}'.format(*map(int, "23.23.186.131".split('.')))
 unsigned int pnSeed[] =
 {
+	0x15509D05
 };
 
 void DumpAddresses()
